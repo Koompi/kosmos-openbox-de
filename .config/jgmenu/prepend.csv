@@ -1,0 +1,19 @@
+# Search box
+@rect,,12,15,260,48,5,left,top,#ffffff 90,#ffffff 0,content
+@search,,20,15,255,48,5,left,top,#ffffff 90,#fffffff 3,Type to search...
+
+# Icon 1
+@rect,^root(fav),28,70,42,42,2,left,top,#ffffff 0,#ffffff 0,
+@icon,,33,75,32,32,2,left,top,#ffffff 0,#ffffff 0,/usr/share/icons/Paper/32x32/emblems/emblem-favorite.png
+
+# Icon 2
+@rect,^root(pmenu),88,70,42,42,2,left,top,#ffffff 0,#ffffff 0
+@icon,,93,75,32,32,2,left,top,#ffffff 0,#ffffff 0,/usr/share/icons/Paper/32x32/emblems/emblem-downloads.png
+
+# Icon 3
+@rect,^root(history),148,70,42,42,2,left,top,#ffffff 0,#ffffff 0,
+@icon,,153,75,32,32,2,left,top,#ffffff 0,#ffffff 0,/usr/share/icons/Paper/32x32/emblems/emblem-synchronizing.png
+
+# Icon 4
+@rect,^root(exit),208,70,42,42,2,left,top,#ffffff 0,#ffffff 0,
+@icon,,213,75,32,32,2,left,top,#ffffff 0,#ffffff 0,/usr/share/icons/Paper/32x32/actions/gnome-shutdown.png

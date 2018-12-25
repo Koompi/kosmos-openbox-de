@@ -1,0 +1,7 @@
+compton --refresh-rate 60 -c -f -O 0.1 -I 0.1 -l 0 -t 0 -C &
+nitrogen --restore &
+tint2 &
+plank &
+volti &
+nm-applet &
+mate-power-manager &
