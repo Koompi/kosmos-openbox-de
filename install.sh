@@ -38,35 +38,46 @@ sudo pacman -S libreoffice-fresh -y
 ## Setup system setting tools
 ### Resource and Task Management
 sudo pacman -S  gnome-system-monitor -y
+
 ### Authentication Manager
 sudo pacman -S polkit-gnome -y
+
 ### Power Management
 sudo pacman -S mate-power-manager -y
+
 ### Display Management
 sudo pacman -S arandr -y
+
 ### Network Management
 sudo pacman -S wpa_supplicant dialog networkmanager nm-connection-editor network-manager-applet openssh rsync samba -y
 #### VPN
 sudo pacman -S networkmanager-openconnect networkmanager-openvpn networkmanager-pptp networkmanager-vpnc -y
 sudo systemctl enable NetworkManager.service
+
 ### Sound Manager
 sudo pacman -S pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf pavucontrol
 yaourt -S volti -y
+
 ### Setup theme
 sudo pacman -S lxappearance-gtk3 paper-icon-theme materia-gtk-theme adapta-gtk-theme 
+
 ### Setup printer
 sudo pacman -S system-config-printer cups-pk-helper
 yaourt -S gtklp
+
 ### File preference
 yaourt -S obapps
+
 ### Key bindings
 yaourt -S obkey-git
+
 ### Obmenu Generator
 yaourt -S obmenu-generator
 yaourt -S perl-gtk2-unique
 sudo chmod 777 /usr/bin/obmenu-generator
 sudo obmenu-generator -d -i -p
 openbox --reconfigure
+
 ### Home Config
 rsync -avz .config/* /home/kosmos/.config/
 nitrogen --set-zoom-fill /home/$USER/.config/openbox/kosmos.jpg --save
