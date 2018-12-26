@@ -1,79 +1,76 @@
 # SETUP KOSMOS DESKTOP ENVIRONMENT
-## Setup yaourt
-sudo pacman -S --needed base-devel git wget yajl
-git clone https://aur.archlinux.org/package-query.git
-cd package-query/
-makepkg -si && cd ..
-git clone https://aur.archlinux.org/yaourt.git
-cd yaourt/
-makepkg -si && cd ..
-rm -rf package-query
-rm -rf yaourt
+## Setup yay
+sudo pacman -S git
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ..
+
 
 ## Setup xserver
-sudo pacman -S xorg -y
+sudo pacman -S xorg
 
 ## Setup display manager
-sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings -y
+sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 sudo systemctl enable lightdm.service
 
 ## Setup window manager
-sudo pacman -S openbox obconf obmenu -y
+sudo pacman -S openbox obconf obmenu
 
 ## Setup terminal
-sudo pacman -S gnome-terminal xterm -y
+sudo pacman -S gnome-terminal xterm
 
 ## Setup desktop env components
-sudo pacman -S tint2 jgmenu plank nitrogen compton -y
+sudo pacman -S tint2 jgmenu plank nitrogen compton
 
 ## Setup file and disk management applications
-sudo pacman -S nautilus gnome-disk-utility gnome-disks xarchiver -y
+sudo pacman -S nautilus gnome-disk-utility gnome-disks xarchiver
 
 ## Setup editors
-sudo pacman -S gedit code atom -y
+sudo pacman -S gedit code atom
 
 ## Setup office
-sudo pacman -S libreoffice-fresh -y
+sudo pacman -S libreoffice-fresh
 
 ## Setup system setting tools
 ### Resource and Task Management
-sudo pacman -S  gnome-system-monitor -y
+sudo pacman -S  gnome-system-monitor
 
 ### Authentication Manager
-sudo pacman -S polkit-gnome -y
+sudo pacman -S polkit-gnome
 
 ### Power Management
-sudo pacman -S mate-power-manager -y
+sudo pacman -S mate-power-manager
 
 ### Display Management
-sudo pacman -S arandr -y
+sudo pacman -S arandr
 
 ### Network Management
-sudo pacman -S wpa_supplicant dialog networkmanager nm-connection-editor network-manager-applet openssh rsync samba -y
+sudo pacman -S wpa_supplicant dialog networkmanager nm-connection-editor network-manager-applet openssh rsync samba
 #### VPN
-sudo pacman -S networkmanager-openconnect networkmanager-openvpn networkmanager-pptp networkmanager-vpnc -y
+sudo pacman -S networkmanager-openconnect networkmanager-openvpn networkmanager-pptp networkmanager-vpnc
 sudo systemctl enable NetworkManager.service
 
 ### Sound Manager
 sudo pacman -S pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf pavucontrol
-yaourt -S volti -y
+yay -S --noconfirm volti
 
 ### Setup theme
 sudo pacman -S lxappearance-gtk3 paper-icon-theme materia-gtk-theme adapta-gtk-theme 
 
 ### Setup printer
 sudo pacman -S system-config-printer cups-pk-helper
-yaourt -S gtklp
+yay -S --noconfirm gtklp
 
 ### File preference
-yaourt -S obapps
+yay -S --noconfirm obapps
 
 ### Key bindings
-yaourt -S obkey-git
+yay -S --noconfirm obkey-git
 
 ### Obmenu Generator
-yaourt -S obmenu-generator
-yaourt -S perl-gtk2-unique
+yay -S --noconfirm obmenu-generator
+yay -S --noconfirm perl-gtk2-unique
 sudo chmod 777 /usr/bin/obmenu-generator
 sudo obmenu-generator -d -i -p
 openbox --reconfigure
